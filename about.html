@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Mary & Gizmo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Mary & Gizmo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="projects.html">My Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <section id="about">
+            <h2>About Me</h2>
+            
+            <div class="profile-section">
+                <div class="profile-image">
+                    <a href="#" onclick="openImageModal('image/Profile.jpeg'); return false;">
+                        <img src="image/Profile.jpeg" alt="Mary's Profile Picture">
+                    </a>
+                </div>
+                
+                <div class="profile-intro">
+                    <p>As a software engineering student at UPM, I combine technical expertise with creative problem-solving to build innovative solutions. My approach to coding is both methodical and imaginative, allowing me to tackle complex challenges while maintaining clean, efficient code.</p>
+                    
+                    <p>Beyond coding, I channel my creativity into digital art and design, exploring new techniques and styles that often inspire my technical work. This blend of technical and artistic skills enables me to create solutions that are both functional and visually appealing.</p>
+                    
+                    <p>Looking ahead, I'm excited to contribute to impactful projects in the tech industry, whether that's through developing innovative software solutions or creating engaging digital experiences. My goal is to make meaningful contributions while continuously growing as a software engineer.</p>
+                </div>
+            </div>
+
+            <!-- Add Modal for Image -->
+            <div id="imageModal" class="modal">
+                <span class="close-modal" onclick="closeImageModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+
+            <div class="about-info">
+                <h3>About Me</h3>
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Full Name</td>
+                        <td>Maryam Rizkha Rahmanisa</td>
+                    </tr>
+                    <tr>
+                        <td>Field of Study</td>
+                        <td>Software Engineering</td>
+                    </tr>
+                    <tr>
+                        <td>Current Role</td>
+                        <td>Software Engineering Student at UPM</td>
+                    </tr>
+                    <tr>
+                        <td>Technical Skills</td>
+                        <td>Web Development, Digital Art, UI/UX Design</td>
+                    </tr>
+                    <tr>
+                        <td>Interests</td>
+                        <td>Software Development, Digital Art, Gaming, Creative Design</td>
+                    </tr>
+                    <tr>
+                        <td>Languages</td>
+                        <td>English, Indonesian, Learning Chinese, Basic Japanese</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mary | All Rights Reserved to me</p>
+    </footer>
+
+    <script>
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = "flex";
+            modalImg.src = imageSrc;
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html> 
